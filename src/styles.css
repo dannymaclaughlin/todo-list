@@ -1,0 +1,22 @@
+#header {
+    /* background-color: blue; */
+    border: 2px solid blue;
+    height: fit-content;
+}
+
+.header-logo {
+    font-family: helvetica, arial, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#body {
+/* background-color: red; */
+border: 2px solid red;
+height: 20em;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+}
