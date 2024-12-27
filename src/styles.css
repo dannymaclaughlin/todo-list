@@ -1,7 +1,21 @@
+/* BORDERS */
+/* #header {
+    border: 2px solid blue; 
+}
+#body {
+    border: 2px solid red;
+}
+#footer-section {
+    border: 2px solid green;
+} */
+
+/* HEADER */
 #header {
-    /* background-color: blue; */
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
+
     height: fit-content;
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
 
 .header-logo {
@@ -11,12 +25,21 @@
 }
 
 #body {
-/* background-color: red; */
-border: 2px solid red;
-height: 20em;
+/* border: 2px solid red; */
+
+height: fit-content;
+padding-left: 1em;
 }
 
 #task-list {
     display: flex;
     flex-direction: column;
+}
+
+#footer-section {
+    /* border: 2px solid green; */
+    height: 2em;
+
+    display: flex;
+    flex-direction: row-reverse;
 }
