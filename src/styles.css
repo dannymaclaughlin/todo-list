@@ -1,13 +1,13 @@
 /* BORDERS */
-/* #header {
+#header {
     border: 2px solid blue; 
 }
 #body {
     border: 2px solid red;
 }
-#footer-section {
+#button-section {
     border: 2px solid green;
-} */
+}
 
 /* HEADER */
 #header {
@@ -36,9 +36,10 @@ padding-left: 1em;
     flex-direction: column;
 }
 
-#footer-section {
+#button-section {
     /* border: 2px solid green; */
     height: 2em;
+    padding-right: 1em;
 
     display: flex;
     flex-direction: row-reverse;
