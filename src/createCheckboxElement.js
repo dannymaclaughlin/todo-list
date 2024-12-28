@@ -6,7 +6,7 @@ export function createCheckboxElement() {
     checkboxDiv.classList.add('checkboxDiv');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.id = 'newCheckbox'
+    checkbox.id = 'newCheckbox';
     checkboxDiv.appendChild(checkbox);
     
     // creates label for checkbox element
@@ -14,6 +14,7 @@ export function createCheckboxElement() {
     label.htmlFor = 'newCheckbox';
     const newTaskName = prompt("Enter new task.")
     label.textContent = newTaskName;
+    label.classList = 'strikethrough'
     checkboxDiv.appendChild(label);
 
     taskList.appendChild(checkboxDiv);
