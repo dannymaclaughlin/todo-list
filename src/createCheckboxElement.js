@@ -1,13 +1,7 @@
 export function createCheckboxElement() {
     const taskList = document.getElementById('task-list');
-    
-    // checkbox div
-        // const checkboxDiv = document.createElement('div');
-        // checkboxDiv.classList.add('checkboxDiv');
-        // const someText = document.createTextNode('Test text...');
-        // checkboxDiv.append(someText)
-        // taskList.appendChild(checkboxDiv);
 
+    // creates checkbox input element
     const checkboxDiv = document.createElement('div');
     checkboxDiv.classList.add('checkboxDiv');
     const checkbox = document.createElement('input');
@@ -15,13 +9,14 @@ export function createCheckboxElement() {
     checkbox.id = 'newCheckbox'
     checkboxDiv.appendChild(checkbox);
     
+    // creates label for checkbox element
     const label = document.createElement('label');
     label.htmlFor = 'newCheckbox';
-    label.textContent = 'new checkbox';
+    const newTaskName = prompt("Enter new task.")
+    label.textContent = newTaskName;
     checkboxDiv.appendChild(label);
 
     taskList.appendChild(checkboxDiv);
-    
 };
 
 
