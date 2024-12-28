@@ -1,5 +1,5 @@
 /* BORDERS */
-#header {
+/* #header {
     border: 2px solid blue; 
 }
 #body {
@@ -7,7 +7,7 @@
 }
 #button-section {
     border: 2px solid green;
-}
+} */
 
 /* HEADER */
 #header {
@@ -27,13 +27,17 @@
 #body {
 /* border: 2px solid red; */
 
-height: fit-content;
+height: 85vh;
 padding-left: 1em;
 }
 
 #task-list {
     display: flex;
     flex-direction: column;
+}
+
+.textDiv {
+    border: 2px solid purple;
 }
 
 #button-section {
