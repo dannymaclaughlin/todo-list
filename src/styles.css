@@ -1,21 +1,25 @@
 /* BORDERS */
-/* #header {
-    border: 2px solid blue; 
-}
-#body {
-    border: 2px solid red;
-}
-#button-section {
-    border: 2px solid green;
-} */
+    /* #header {
+        border: 2px solid blue; 
+    }
+    #body {
+        border: 2px solid red;
+    }
+    #button-section {
+        border: 2px solid green;
+    }
+    .checkboxDiv {
+        border: 2px solid purple;
+    } */
 
 /* HEADER */
 #header {
     /* border: 2px solid blue; */
 
     height: fit-content;
-    padding-top: .5em;
-    padding-bottom: .5em;
+    /* padding-top: .5em;
+    padding-bottom: .5em; */
+    padding: .5em;
 }
 
 .header-logo {
@@ -24,11 +28,18 @@
     font-size: 2em;
 }
 
+#main-content {
+    /* border: 2px solid pink; */
+    height: 100vh;
+}
+
 #body {
 /* border: 2px solid red; */
 
-height: 85vh;
-padding-left: 1em;
+height: auto;
+padding-left: 3em;
+
+font-family: helvetica, arial, sans-serif;
 }
 
 #task-list {
