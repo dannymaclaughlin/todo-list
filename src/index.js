@@ -1,8 +1,6 @@
 import "./styles.css";
+import { addNewButtonListener } from "./newButtonListener";
 
-document.getElementById("new-button").addEventListener("click", function() {
-    // test to see if button is working:
-    console.log("New button has been clicked!");
-
-    
-});
+document.addEventListener("DOMContentLoaded", function () {
+    addNewButtonListener();
+})
