@@ -7,6 +7,7 @@ export function createCheckboxElement() {
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = 'newCheckbox';
+    checkbox.classList = 'checkbox';
     checkboxDiv.appendChild(checkbox);
     
     // creates label for checkbox element
