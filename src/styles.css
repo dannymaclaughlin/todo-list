@@ -55,22 +55,26 @@
     width: 20px;
 }
 
-.mainTaskDiv > .task-elements-div {
-    padding-left: 5px;
+.mainTaskDiv {
+    /* border: 2px solid purple; */
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    
+    display: flex;
+    margin: 2px;
 }
 
-.label-title {
-    /* border: 2px solid green; */
+.mainTaskDiv > .task-elements-div {
+    padding-left: 5px;
 }
 
 /* adds strikethrough to label/title */
 .mainTaskDiv > input[type=checkbox]:checked {
     text-decoration: line-through;
 }
-.mainTaskDiv {
-    border: 2px solid purple;
-    display: flex;
-    /* align-items: center; */
+
+.label-title {
+    /* border: 2px solid green; */
 }
 
 .task-elements-div {
