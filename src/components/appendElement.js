@@ -1,3 +1,3 @@
-export function appendElement(parent, child) {
+export function appendElement(child, parent) {
     parent.appendChild(child);
 };
