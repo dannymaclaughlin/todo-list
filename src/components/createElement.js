@@ -5,3 +5,12 @@ export function createDiv(className) {
 
     return newDiv;
 };
+
+export function createCheckbox() {
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = checkbox;
+    checkbox.classList.add('checkbox');
+
+    return checkbox;
+}
