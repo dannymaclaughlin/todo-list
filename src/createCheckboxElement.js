@@ -1,7 +1,7 @@
 export function createCheckboxElement() {
     const taskList = document.getElementById('task-list');
 
-    // creates a div element for the entire checkbox/task element
+    // creates container div for each task
     const mainTaskDiv = document.createElement('div');
     mainTaskDiv.classList.add('mainTaskDiv');
 
