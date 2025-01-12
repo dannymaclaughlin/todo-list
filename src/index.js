@@ -4,6 +4,4 @@ import { createDiv } from "./components/createElement";
 
 document.addEventListener("DOMContentLoaded", function () {
     addNewButtonListener();
-})
-
-createDiv(testid, testclass);
+});

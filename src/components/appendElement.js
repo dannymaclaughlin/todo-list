@@ -1,8 +1,3 @@
-import { createDiv } from "./createElement";
-
-export function appendElement() {
-    const taskList = document.getElementById('task-list');
-
-    const newDiv = createDiv();
-    taskList.appendChild(newDiv);
-}
+export function appendElement(parent, child) {
+    parent.appendChild(child);
+};
