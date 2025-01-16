@@ -2,6 +2,7 @@ import { createDiv } from "./createElement";
 import { appendElement } from "./appendElement";
 import { createCheckbox } from "./createElement";
 import { createCheckboxLabel } from "./createElement";
+import { getUserInput } from "./userInput";
 
 const taskList = document.getElementById('task-list');
 
@@ -16,5 +17,11 @@ export function createTask() {
 
     // creates a label for the checkbox
     const newCheckboxLabel = createCheckboxLabel('taskContainer');
-    appendElement(newCheckboxLabel, newTaskDiv); 
+    appendElement(newCheckboxLabel, newTaskDiv);
+
+    // calls on getUserInput function which prompts the user for a string and assigns the string to the function userInput
+    const userInput = getUserInput();
+
+    // sets newCheckboxLabel's textContent to the string saved in userInput
+    newCheckboxLabel.textContent = userInput;
 }
