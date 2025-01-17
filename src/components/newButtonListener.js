@@ -1,4 +1,4 @@
-import { createTask } from "./components/createTask";
+import { createTask } from "./createTask";
 
 export function addNewButtonListener() {
     const newButton = document.getElementById('new-button');
