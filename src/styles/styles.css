@@ -39,6 +39,8 @@
 .checkbox {
     height: 20px;
     width: 20px;
+
+    border: 2px solid red;
 }
 
 .mainTaskDiv {
@@ -58,7 +60,6 @@
 .mainTaskDiv > input[type=checkbox]:checked {
     text-decoration: line-through;
 }
-
 .label-title {
     /* border: 2px solid green; */
 }
@@ -83,4 +84,25 @@
 
     display: flex;
     flex-direction: row-reverse;
+}
+
+/* NEW */
+.checkboxLabel {
+    /* border: 2px solid red; */
+}
+
+#task-list {
+    border: 4px solid orange;
+}
+
+.taskContainer {
+    border: 2px solid blue;
+}
+
+.labelAndDescriptionContainer {
+    border: 3px solid pink;
+}
+
+.taskContainer {
+    display: flex;
 }

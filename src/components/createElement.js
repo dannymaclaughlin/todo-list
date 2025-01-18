@@ -22,6 +22,7 @@ export function createCheckboxLabel(labelFor) {
     const label = document.createElement('label');
     const checkboxLabel = labelFor;
     label.htmlFor = checkboxLabel;
+    label.classList.add('checkboxLabel')
 
     return label;
 }
