@@ -8,32 +8,41 @@ import { getUserInput } from "./userInput";
 // and assigns it to the variable 'taskList'
 const taskList = document.getElementById('task-list');
 
-// function to assemble/create a task
-export function createTask() {
+function createTaskStructure() {
     // creates a new div,
     // that will act as the container for each task
     const newTaskDiv = createDiv('taskContainer', 'taskContainer');
-    appendElement(newTaskDiv, taskList);
+    
+    // creates container div for checkbox label and description
+    const labelAndDescriptionContainer = createDiv('labelAndDescriptionContainer');
 
     // creates a checkbox (no label, just the checkbox itself)
     const newCheckbox = createCheckbox();
-    appendElement(newCheckbox, newTaskDiv);
-
-    // creates container div for checkbox label and description
-    const labelAndDescriptionContainer = createDiv('labelAndDescriptionContainer');
-    appendElement(labelAndDescriptionContainer, newTaskDiv)
-
     // creates a label for the checkbox
     const newCheckboxLabel = createCheckboxLabel('taskContainer');
-    appendElement(newCheckboxLabel, labelAndDescriptionContainer);
+
+    // creates div to house task description
+    const taskDescriptionDiv = createDiv('taskDescriptionContainer')
+
+    return {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv};
+}
+
+function getTaskData() {
     // gets user input for label
     const userInput = getUserInput();
     newCheckboxLabel.textContent = userInput;
 
-    // creates div to house task description
-    const taskDescriptionDiv = createDiv('taskDescriptionContainer')
     const userInputForDescription = getUserInput();
     taskDescriptionDiv.textContent = userInputForDescription;
-    appendElement(taskDescriptionDiv, labelAndDescriptionContainer)
+}
 
+// function to assemble/create a task
+export function createTask() {
+    const {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv} = createTaskStructure();
+
+    appendElement(newTaskDiv, taskList);
+    appendElement(newCheckbox, newTaskDiv)
+    appendElement(labelAndDescriptionContainer, newTaskDiv);
+    appendElement(newCheckboxLabel, labelAndDescriptionContainer)
+    appendElement(taskDescriptionDiv, labelAndDescriptionContainer)
 }
