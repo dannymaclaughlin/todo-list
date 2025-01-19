@@ -8,6 +8,7 @@ import { getUserInput } from "./userInput";
 // and assigns it to the variable 'taskList'
 const taskList = document.getElementById('task-list');
 
+// function to create the structure of the task
 function createTaskStructure() {
     // creates a new div,
     // that will act as the container for each task
@@ -27,18 +28,22 @@ function createTaskStructure() {
     return {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv};
 }
 
+// function to get data from user for task details
 function getTaskData() {
     // gets user input for label
     const userInput = getUserInput();
-    newCheckboxLabel.textContent = userInput;
-
     const userInputForDescription = getUserInput();
-    taskDescriptionDiv.textContent = userInputForDescription;
+
+    return {userInput, userInputForDescription}
 }
 
 // function to assemble/create a task
 export function createTask() {
     const {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv} = createTaskStructure();
+    const {userInput, userInputForDescription} = getTaskData();
+    console.log(userInput, userInputForDescription);
+    newCheckboxLabel.textContent = userInput;
+    taskDescriptionDiv.textContent = userInputForDescription;
 
     appendElement(newTaskDiv, taskList);
     appendElement(newCheckbox, newTaskDiv)
