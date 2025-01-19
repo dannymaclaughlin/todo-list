@@ -12,21 +12,20 @@
     font-size: 2em;
 }
 
-#main-content {
-    /* border: 2px solid pink; */
-    height: 100vh;
-}
-
 #body {
     /* border: 2px solid red; */
 
-    height: auto;
+    /* height: auto; */
     padding-left: 3em;
+    padding-right: 3em;
 
     font-family: helvetica, arial, sans-serif;
 }
 
+/* STYLING FOR TASKS */
 #task-list {
+    /* border: 4px solid orange; */
+
     display: flex;
     flex-direction: column;
 }
@@ -35,74 +34,40 @@
     padding-bottom: 5px;
 }
 
+.taskContainer {
+    /* border: 2px solid blue; */
+    
+    display: flex;
+
+    background-color: lightgray;
+    border-radius: 5px;
+    height: 4.5em;
+    margin-bottom: 1em;
+    padding: .5em;
+}
+
+.taskDescriptionContainer {
+    font-size: .7em;
+}
+
+.labelAndDescriptionContainer {
+    /* border: 3px solid pink; */
+
+    padding-top: 4px;
+    padding-left: 5px;
+}
+
 /* checkbox element(square checkmark box) => use to edit the styling of the checkbox */
 .checkbox {
     height: 20px;
     width: 20px;
-
-    border: 2px solid red;
-}
-
-.mainTaskDiv {
-    /* border: 2px solid purple; */
-    background-color: rgb(235, 235, 235);
-    border-radius: 5px;
-    
-    display: flex;
-    margin: 2px;
-}
-
-.mainTaskDiv > .task-elements-div {
-    padding-left: 5px;
-}
-
-/* adds strikethrough to label/title */
-.mainTaskDiv > input[type=checkbox]:checked {
-    text-decoration: line-through;
-}
-.label-title {
-    /* border: 2px solid green; */
-}
-
-.task-elements-div {
-    /* border: 2px solid red; */
-    padding-top: 4px;
-}
-
-.label-title {
-    font-size: 1em;
-}
-
-.task-description-div {
-    font-size: .8em;
 }
 
 #button-section {
     /* border: 2px solid green; */
     height: 2em;
-    padding-right: 1em;
+    padding-right: 3em;
 
     display: flex;
     flex-direction: row-reverse;
-}
-
-/* NEW */
-.checkboxLabel {
-    /* border: 2px solid red; */
-}
-
-#task-list {
-    border: 4px solid orange;
-}
-
-.taskContainer {
-    border: 2px solid blue;
-}
-
-.labelAndDescriptionContainer {
-    border: 3px solid pink;
-}
-
-.taskContainer {
-    display: flex;
 }

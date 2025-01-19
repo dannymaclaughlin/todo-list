@@ -23,10 +23,10 @@ function createTaskStructure() {
     const newCheckboxLabel = createCheckboxLabel('taskContainer');
 
     // creates div to house task description
-    const taskDescriptionDiv = createDiv('taskDescriptionContainer')
+    const taskDescriptionDiv = createDiv('taskDescriptionContainer');
 
     return {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv};
-}
+};
 
 // function to get data from user for task details
 function getTaskData() {
@@ -34,20 +34,20 @@ function getTaskData() {
     const userInput = getUserInput();
     const userInputForDescription = getUserInput();
 
-    return {userInput, userInputForDescription}
-}
+    return {userInput, userInputForDescription};
+};
 
 // function to assemble/create a task
 export function createTask() {
     const {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv} = createTaskStructure();
     const {userInput, userInputForDescription} = getTaskData();
-    console.log(userInput, userInputForDescription);
+
     newCheckboxLabel.textContent = userInput;
     taskDescriptionDiv.textContent = userInputForDescription;
 
     appendElement(newTaskDiv, taskList);
-    appendElement(newCheckbox, newTaskDiv)
+    appendElement(newCheckbox, newTaskDiv);
     appendElement(labelAndDescriptionContainer, newTaskDiv);
-    appendElement(newCheckboxLabel, labelAndDescriptionContainer)
-    appendElement(taskDescriptionDiv, labelAndDescriptionContainer)
-}
+    appendElement(newCheckboxLabel, labelAndDescriptionContainer);
+    appendElement(taskDescriptionDiv, labelAndDescriptionContainer);
+};
