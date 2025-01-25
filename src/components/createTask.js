@@ -4,31 +4,27 @@ import { createCheckbox } from "./createElement";
 import { createCheckboxLabel } from "./createElement";
 import { getUserInput } from "./userInput";
 
-// grabs the div in the html file with the class 'task-list'
-// and assigns it to the variable 'taskList'
+// ASSIGNS THE 'task-list' HTML ELEMENT TO THE VARIABLE 'taskList'
 const taskList = document.getElementById('task-list');
 
-// function to create the structure of the task
 function createTaskStructure() {
-    // creates a new div,
-    // that will act as the container for each task
+    // CONTAINER DIV FOR TASKS
     const newTaskDiv = createDiv('taskContainer', 'taskContainer');
     
-    // creates container div for checkbox label and description
+    // CONTAINER FOR CHECKBOX LABEL & DESCRIPTION
     const labelAndDescriptionContainer = createDiv('labelAndDescriptionContainer');
 
-    // creates a checkbox (no label, just the checkbox itself)
+    // CHECKBOX + LABEL
     const newCheckbox = createCheckbox();
-    // creates a label for the checkbox
     const newCheckboxLabel = createCheckboxLabel('taskContainer');
 
-    // creates div to house task description
+    // DESCRIPTION CONTAINER
     const taskDescriptionDiv = createDiv('taskDescriptionContainer');
 
     return {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv};
 };
 
-// function to get data from user for task details
+// GET INPUT FROM USER
 function getTaskData() {
     // gets user input for label
     const userInput = getUserInput();
@@ -37,7 +33,7 @@ function getTaskData() {
     return {userInput, userInputForDescription};
 };
 
-// function to assemble/create a task
+// ASSEMBLE/CREATE TASK
 export function createTask() {
     const {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv} = createTaskStructure();
     const {userInput, userInputForDescription} = getTaskData();
