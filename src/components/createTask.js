@@ -10,40 +10,59 @@ const taskList = document.getElementById('task-list');
 function createTaskStructure() {
     // CONTAINER DIV FOR TASKS
     const newTaskDiv = createDiv('taskContainer', 'taskContainer');
-    
-    // CONTAINER FOR CHECKBOX LABEL & DESCRIPTION
-    const labelAndDescriptionContainer = createDiv('labelAndDescriptionContainer');
 
-    // CHECKBOX + LABEL
-    const newCheckbox = createCheckbox();
-    const newCheckboxLabel = createCheckboxLabel('taskContainer');
+        // CONTAINER FOR CONTAINER DIVS
+        const taskContentContainer = createDiv('taskContentContainer');
 
-    // DESCRIPTION CONTAINER
-    const taskDescriptionDiv = createDiv('taskDescriptionContainer');
+            // CONTAINER FOR CHECKBOX LABEL & DESCRIPTION
+            const labelAndDescriptionContainer = createDiv('labelAndDescriptionContainer');
 
-    return {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv};
+                // CHECKBOX + LABEL
+                const newCheckbox = createCheckbox();
+                const newCheckboxLabel = createCheckboxLabel('taskContainer');
+
+                // DESCRIPTION CONTAINER
+                const taskDescriptionDiv = createDiv('taskDescriptionContainer');
+
+            // CONTAINER FOR DUE DATE & PRIORITY
+            const dueDateAndPriorityContainer = createDiv('dueDateAndPriorityContainer');
+
+                // DUE DATE
+                const dueDateContainer = createDiv('dueDateContainer');
+
+                // PRIORITY
+
+    return {newTaskDiv, taskContentContainer, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv, dueDateAndPriorityContainer, dueDateContainer};
 };
 
 // GET INPUT FROM USER
 function getTaskData() {
     // gets user input for label
-    const userInput = getUserInput();
+    const userInputForTaskName = getUserInput();
+    // gets user input for description
     const userInputForDescription = getUserInput();
+    // gets user input for due date
+    const userInputForDueDate = getUserInput();
 
-    return {userInput, userInputForDescription};
+    return {userInputForTaskName, userInputForDescription, userInputForDueDate};
 };
 
 // ASSEMBLE/CREATE TASK
 export function createTask() {
-    const {newTaskDiv, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv} = createTaskStructure();
-    const {userInput, userInputForDescription} = getTaskData();
+    const {newTaskDiv, taskContentContainer, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionDiv, dueDateAndPriorityContainer, dueDateContainer} = createTaskStructure();
+    const {userInputForTaskName, userInputForDescription, userInputForDueDate} = getTaskData();
 
-    newCheckboxLabel.textContent = userInput;
+    newCheckboxLabel.textContent = userInputForTaskName;
     taskDescriptionDiv.textContent = userInputForDescription;
+
+    dueDateContainer.textContent = userInputForDueDate;
 
     appendElement(newTaskDiv, taskList);
     appendElement(newCheckbox, newTaskDiv);
-    appendElement(labelAndDescriptionContainer, newTaskDiv);
+    appendElement(taskContentContainer, newTaskDiv)
+    appendElement(labelAndDescriptionContainer, taskContentContainer);
     appendElement(newCheckboxLabel, labelAndDescriptionContainer);
     appendElement(taskDescriptionDiv, labelAndDescriptionContainer);
+    appendElement(dueDateAndPriorityContainer, taskContentContainer);
+    appendElement(dueDateContainer, dueDateAndPriorityContainer);
 };
