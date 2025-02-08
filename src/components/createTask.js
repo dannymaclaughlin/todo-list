@@ -3,6 +3,7 @@ import { appendElement } from "./appendElement";
 import { createCheckbox } from "./createElement";
 import { createCheckboxLabel } from "./createElement";
 import { getUserInput } from "./userInput";
+import { createDateInput } from "./createElement";
 
 // ASSIGNS THE 'task-list' HTML ELEMENT TO THE VARIABLE 'taskList'
 const taskList = document.getElementById('task-list');
@@ -38,11 +39,11 @@ function createTaskStructure() {
 // GET INPUT FROM USER
 function getTaskData() {
     // gets user input for label
-    const userInputForTaskName = getUserInput();
+    const userInputForTaskName = getUserInput("Enter task.");
     // gets user input for description
-    const userInputForDescription = getUserInput();
+    const userInputForDescription = getUserInput("Enter task description.");
     // gets user input for due date
-    const userInputForDueDate = getUserInput();
+    const userInputForDueDate = getUserInput("Enter task due date.");
 
     return {userInputForTaskName, userInputForDescription, userInputForDueDate};
 };
