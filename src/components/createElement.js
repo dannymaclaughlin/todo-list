@@ -26,3 +26,10 @@ export function createCheckboxLabel(labelFor) {
 
     return label;
 }
+
+export function createDateInput() {
+    const input = document.createElement('input');
+    input.type = 'date';
+    input.id = dateInput;
+    input.classList.add('dateInput');
+}
