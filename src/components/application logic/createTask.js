@@ -1,5 +1,5 @@
 import { createDiv } from "./createElement";
-import { appendElement } from "./appendElement";
+import { appendElement } from "../dom-related/appendElement";
 import { createCheckbox } from "./createElement";
 import { createCheckboxLabel } from "./createElement";
 import { getUserInput } from "./userInput";
