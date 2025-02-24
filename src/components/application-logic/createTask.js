@@ -1,14 +1,14 @@
 import { createDiv } from "./createElement";
-import { appendElement } from "../dom-related/appendElement";
 import { createCheckbox } from "./createElement";
 import { createCheckboxLabel } from "./createElement";
 import { getUserInput } from "./userInput";
 import { createDateInput } from "./createElement";
+import { renderTask } from "../dom-related/renderTask";
 
 // ASSIGNS THE 'task-list' HTML ELEMENT TO THE VARIABLE 'taskList'
 const taskList = document.getElementById('task-list');
 
-function createTaskStructure() {
+export function createTaskStructure() {
     // CONTAINER DIV FOR TASKS
     const newTaskContainer = createDiv('taskContainer', 'taskContainer');
 
@@ -37,7 +37,7 @@ function createTaskStructure() {
 };
 
 // GET INPUT FROM USER
-function getTaskData() {
+export function getTaskData() {
     // gets user input for label
     const userInputForTaskName = getUserInput("Enter task.");
     // gets user input for description
@@ -49,21 +49,14 @@ function getTaskData() {
 };
 
 // ASSEMBLE/CREATE TASK
-export function createTask() {
-    const {newTaskContainer, taskContentContainer, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionContainer, dueDateAndPriorityContainer, dueDateContainer} = createTaskStructure();
+export function createTask(newCheckboxLabel, taskDescriptionContainer, dueDateContainer) { // sets newCheckboxLabel, taskDescriptionContainer, and dueDateContainer as parameters for when it takes in those args from renderTask()
     const {userInputForTaskName, userInputForDescription, userInputForDueDate} = getTaskData();
+        console.log(`userInputForTaskName entered: ${userInputForTaskName}, userInputForDescription entered: ${userInputForDescription}, userInputForDueDate entered: ${userInputForDueDate}`)
 
     newCheckboxLabel.textContent = userInputForTaskName;
+        console.log(`newCheckboxLabel.textContent => ${newCheckboxLabel.textContent}`)
     taskDescriptionContainer.textContent = userInputForDescription;
+        console.log(`taskDescriptionContainer.textContent => ${taskDescriptionContainer.textContent}`)
 
     dueDateContainer.textContent = userInputForDueDate;
-
-    appendElement(newTaskContainer, taskList);
-    appendElement(newCheckbox, newTaskContainer);
-    appendElement(taskContentContainer, newTaskContainer)
-    appendElement(labelAndDescriptionContainer, taskContentContainer);
-    appendElement(newCheckboxLabel, labelAndDescriptionContainer);
-    appendElement(taskDescriptionContainer, labelAndDescriptionContainer);
-    appendElement(dueDateAndPriorityContainer, taskContentContainer);
-    appendElement(dueDateContainer, dueDateAndPriorityContainer);
 };
