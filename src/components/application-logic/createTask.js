@@ -3,7 +3,6 @@ import { createCheckbox } from "./createElement";
 import { createCheckboxLabel } from "./createElement";
 import { getUserInput } from "./userInput";
 import { createDateInput } from "./createElement";
-import { renderTask } from "../dom-related/renderTask";
 
 // ASSIGNS THE 'task-list' HTML ELEMENT TO THE VARIABLE 'taskList'
 const taskList = document.getElementById('task-list');

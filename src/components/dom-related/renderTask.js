@@ -1,7 +1,6 @@
 import { createTask } from "../application-logic/createTask";
 import { appendElement } from "./appendElement";
 import { createTaskStructure } from "../application-logic/createTask";
-import { getTaskData } from "../application-logic/createTask";
 
 const taskList = document.getElementById('task-list');
 

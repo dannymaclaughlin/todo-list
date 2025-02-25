@@ -1,4 +1,3 @@
-import { createTask } from "./createTask";
 import { renderTask } from "../dom-related/renderTask";
 
 export function addNewButtonListener() {
