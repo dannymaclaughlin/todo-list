@@ -38,6 +38,7 @@ export function createTaskStructure() {
 // GET INPUT FROM USER
 export function getTaskData() {
     // gets user input for label
+    // executes getUserInput() => returns what user inputted => assigns that to userInputForTaskName variable
     const userInputForTaskName = getUserInput("Enter task.");
     // gets user input for description
     const userInputForDescription = getUserInput("Enter task description.");

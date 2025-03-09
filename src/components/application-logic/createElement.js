@@ -30,6 +30,15 @@ export function createCheckboxLabel(labelFor) {
 export function createDateInput() {
     const input = document.createElement('input');
     input.type = 'date';
-    input.id = dateInput;
+    input.id = 'dateInput';
     input.classList.add('dateInput');
+}
+
+export function createTextInput(class) {
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.id = 'textInput';
+    input.classList.add('class');
+
+    return input;
 }

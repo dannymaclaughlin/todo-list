@@ -4,3 +4,9 @@ export function getUserInput(message) {
 
     return userInput;
 };
+
+// export function getUserInput() {
+//     const userInput = 
+
+//     return userInput;
+// };
