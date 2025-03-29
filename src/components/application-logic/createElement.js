@@ -27,18 +27,44 @@ export function createCheckboxLabel(labelFor) {
     return label;
 }
 
-export function createDateInput() {
-    const input = document.createElement('input');
-    input.type = 'date';
-    input.id = 'dateInput';
-    input.classList.add('dateInput');
+// export function createDateInput() {
+//     const input = document.createElement('input');
+//     input.type = 'date';
+//     input.id = 'dateInput';
+//     input.classList.add('dateInput');
+// }
+
+// FORM
+
+export function createFormElement() {
+    const form = document.createElement('form');
+
+    return form;
+}
+// INPUT LABEL AND TEXT INPUT
+
+export function createInputLabel(labelFor, labelTextContent, className) {
+    const label = document.createElement('label');
+    const inputLabel = labelFor;
+    label.htmlFor = inputLabel;
+    label.classList.add(className);
+    label.textContent = labelTextContent;
+
+    return label;
 }
 
-export function createTextInput(class) {
+export function createTextInput(idName, className) {
     const input = document.createElement('input');
     input.type = 'text';
-    input.id = 'textInput';
-    input.classList.add('class');
+    input.id = idName;
+    input.classList.add('className');
+
+    return input;
+}
+
+export function createSubmitButtonInput() {
+    const input = document.createElement('input')
+    input.type = 'submit';
 
     return input;
 }

@@ -6,7 +6,7 @@ export function getUserInput(message) {
 };
 
 // export function getUserInput() {
-//     const userInput = 
+//     const userInput = run function => that will pop a text input and return input text
 
 //     return userInput;
 // };
