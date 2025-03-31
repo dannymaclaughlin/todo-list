@@ -12,7 +12,11 @@ export function createForm() {
     const taskDescriptionLabel = createInputLabel('taskDescription', 'Task Description:');
     const taskDescriptionInputElement = createTextInput('taskDescription');
     // CREATES SUBMIT BUTTON
-    const submitButton = createSubmitButtonInput();
+    const submitButton = createSubmitButtonInput(taskNameInputElement, taskDescriptionInputElement, function(userText1, userText2) {
+        console.log(userText1)
+        console.log(userText2)
+
+    });
 
     appendElement(form, taskList)
     appendElement(taskNameLabel, form)

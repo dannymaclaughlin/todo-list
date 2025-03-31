@@ -62,9 +62,21 @@ export function createTextInput(idName, className) {
     return input;
 }
 
-export function createSubmitButtonInput() {
+export function createSubmitButtonInput(inputElement1, inputElement2, onSubmit) {
     const input = document.createElement('input')
     input.type = 'submit';
+
+    input.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // if (typeof onSubmit === 'function') {
+        //     onSubmit(inputElement.value)
+        // }
+        onSubmit(inputElement1.value, inputElement2.value);
+
+        inputElement1.value = '';
+        inputElement2.value = '';
+    })
 
     return input;
 }
