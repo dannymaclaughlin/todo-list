@@ -5,6 +5,8 @@ import { createTaskStructure } from "../application-logic/createTask";
 const taskList = document.getElementById('task-list');
 
 export function renderTask() {
+    // creates task structure(elements), assigns them to variables, and returns variables to make them available for use.
+    // (will be used to target specific elements in the task structure & append it to the DOM)
     const {newTaskContainer, taskContentContainer, labelAndDescriptionContainer, newCheckbox, newCheckboxLabel, taskDescriptionContainer, dueDateAndPriorityContainer, dueDateContainer} = createTaskStructure();
     createTask(newCheckboxLabel, taskDescriptionContainer, dueDateContainer); // passes through the variables needed in createTask() as arguments
 
@@ -17,3 +19,4 @@ export function renderTask() {
     appendElement(dueDateAndPriorityContainer, taskContentContainer);
     appendElement(dueDateContainer, dueDateAndPriorityContainer);
 }
+
